@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
 
             <xpath expr="//page[@name='actions_api']" position="replace" />
-            <xpath expr="//page[@name='extra_assets']" position="replace" />
+            <!-- <xpath expr="//page[@name='extra_assets']" position="replace" /> -->
             <xpath expr="//page[@name='form_display_settings']" position="replace" />
             <xpath expr="//page[@name='form_permissions']" position="replace" />
             <xpath expr="//page[@name='portal_settings']" position="replace" />
@@ -41,7 +41,7 @@
                 </field>
                 <field name="formio_res_model_id" position="attributes">
                     <attribute name="column_invisible">1</attribute>
-                </field>record
+                </field>
                 <field name="portal" position="attributes">
                     <attribute name="column_invisible">1</attribute>
                 </field>
@@ -60,13 +60,13 @@
         action="formio.action_formio_form"
         active="false"
     />
-    <menuitem
+    <!-- <menuitem
         id="formio.menu_formio_extra_asset"
         name="Extra Assets"
         parent="formio.menu_formio_configuration"
         sequence="50"
         action="formio.action_formio_extra_asset"
         active="false"
-    />
+    /> -->
 
 </odoo>
