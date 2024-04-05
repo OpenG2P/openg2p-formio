@@ -1,3 +1,5 @@
 [build-system]
 requires = ["whool"]
 build-backend = "whool.buildapi"
+[tool.whool]
+depends_override = {formio = false,formio_storage_filestore = false}

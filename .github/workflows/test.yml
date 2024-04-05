@@ -10,6 +10,7 @@ on:
       - "15.0*"
       - "17.0*"
 env:
+  ADDONS_PATH: /opt/odoo/addons,/opt/odoo/odoo-formio
   OCA_GIT_USER_NAME: openg2p
   OCA_GIT_USER_EMAIL: bot@openg2p.org
 jobs:
@@ -78,6 +79,16 @@ jobs:
         ports:
           - 5432:5432
     steps:
+      - name: pulling formio
+        shell: bash
+        run: |
+          cd /opt/odoo
+          BRANCH_NAME=$(echo ${{ github.base_ref || github.ref }} | sed -e 's,.*/\(.*\),\1,')
+          if [[ $BRANCH_NAME = 15.0* ]] ; then
+            git clone -b 15.0 --depth 1 https://github.com/novacode-nl/odoo-formio.git
+          elif [[ $BRANCH_NAME = 17.0* ]] ; then
+            git clone -b 17.0 --depth 1 https://github.com/novacode-nl/odoo-formio.git
+          fi
       - uses: actions/checkout@v3
         with:
           persist-credentials: false
