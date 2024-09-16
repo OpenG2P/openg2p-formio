@@ -41,7 +41,7 @@
                 </field>
                 <field name="formio_res_model_id" position="attributes">
                     <attribute name="column_invisible">1</attribute>
-                </field>record
+                </field>
                 <field name="portal" position="attributes">
                     <attribute name="column_invisible">1</attribute>
                 </field>
