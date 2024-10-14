@@ -13,6 +13,7 @@
     "data": [
         "views/formio_builder.xml",
         "views/program_view.xml",
+        "data/formio_storage_filestore_data.xml",
         "wizard/g2p_self_service_program_view_wizard.xml",
     ],
     "external_dependencies": {"python": ["formio-data"]},
